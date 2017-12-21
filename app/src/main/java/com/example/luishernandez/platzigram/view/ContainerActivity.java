@@ -1,9 +1,11 @@
 package com.example.luishernandez.platzigram.view;
 
 import android.support.annotation.IdRes;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.SearchEvent;
 
 import com.example.luishernandez.platzigram.R;
@@ -19,7 +21,7 @@ public class ContainerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
-        
+        setToolbarTab();
         /*
         bottomBar.setOnTabReselectListener(new OnTabReselectListener() {
             @Override
@@ -44,5 +46,19 @@ public class ContainerActivity extends AppCompatActivity {
 
             }
         });*/
+    }
+
+    public void setToolbarTab(){
+
+        Toolbar toolbarTab = (Toolbar) findViewById(R.id.toolbarTab);
+        setSupportActionBar(toolbarTab);
+        getSupportActionBar().setTitle("ConsulMed");
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.addTab(tabLayout.newTab().setText("Home"));
+        tabLayout.addTab(tabLayout.newTab().setText("Profile"));
+        tabLayout.addTab(tabLayout.newTab().setText("Search"));
+
+
     }
 }
