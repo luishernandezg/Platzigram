@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="edittext_textsize_login">22sp</dimen>
+    <dimen name="padding_horizontal_login">36dp</dimen>
+    <dimen name="margin_top_button">16dp</dimen>
+    <dimen name="textsize_donthaveaccount">16sp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="height_card">200dp</dimen>
+    <dimen name="radius_card">6dp</dimen>
+    <dimen name="username_size_card">25sp</dimen>
+    <dimen name="firstWoed_size_card">15sp</dimen>
+    <dimen name="like_margintop_card">10dp</dimen>
+    <dimen name="bottombar_height">70dp</dimen>
+</resources>
