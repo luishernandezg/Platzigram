@@ -1,4 +1,4 @@
-package com.example.luis.platzigram;
+package com.example.luishernandez.platzigram;
 
 import org.junit.Test;
 
