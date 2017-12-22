@@ -1,5 +1,6 @@
 package com.example.luishernandez.platzigram.view;
 
+import android.net.Uri;
 import android.support.annotation.IdRes;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentTransaction;
@@ -12,10 +13,12 @@ import com.example.luishernandez.platzigram.R;
 import com.example.luishernandez.platzigram.view.fragment.HomeFragment;
 import com.example.luishernandez.platzigram.view.fragment.ProfileFragment;
 import com.example.luishernandez.platzigram.view.fragment.SearchFragment;
+import com.example.luishernandez.platzigram.view.fragment.TabFamiliares;
+import com.example.luishernandez.platzigram.view.fragment.TabUsuario;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabReselectListener;
 
-public class ContainerActivity extends AppCompatActivity {
+public class ContainerActivity extends AppCompatActivity implements TabUsuario.OnFragmentInteractionListener, TabFamiliares.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +58,15 @@ public class ContainerActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("ConsulMed");
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.addTab(tabLayout.newTab().setText("Home"));
-        tabLayout.addTab(tabLayout.newTab().setText("Profile"));
-        tabLayout.addTab(tabLayout.newTab().setText("Search"));
+        tabLayout.addTab(tabLayout.newTab().setText("Usuario"));
+        tabLayout.addTab(tabLayout.newTab().setText("Familiares"));
 
+
+
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
 
     }
 }
