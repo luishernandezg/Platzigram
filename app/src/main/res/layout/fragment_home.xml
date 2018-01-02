@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.luishernandez.platzigram.view.fragment.HomeFragment">
 
-    <include layout="@layout/actionbar_toolbar"></include>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,14 +14,19 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:paddingLeft="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_vertical_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-
-        >
+        android:paddingTop="@dimen/activity_vertical_margin">
 
 
         <include layout="@layout/cardview_picture"></include>
         <include layout="@layout/cardview_picture"></include>
+
     </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/pictureRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

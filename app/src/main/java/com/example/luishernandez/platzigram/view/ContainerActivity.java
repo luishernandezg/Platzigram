@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.example.luishernandez.platzigram.R;
+import com.example.luishernandez.platzigram.view.fragment.HomeFragment;
 import com.example.luishernandez.platzigram.view.fragment.ProfileFragment;
 import com.example.luishernandez.platzigram.view.fragment.SearchFragment;
 
@@ -38,14 +39,11 @@ public class ContainerActivity extends AppCompatActivity {
         setSupportActionBar(toolbarTab);
         getSupportActionBar().setTitle("ConsulMed");
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.addTab(tabLayout.newTab().setText("Usuario"));
-        tabLayout.addTab(tabLayout.newTab().setText("Familiares"));
-
     }
 
     public void setupViewPager(ViewPager viewPager){
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
+        adapter.addFragment(new HomeFragment(),"Home");
         adapter.addFragment(new ProfileFragment(),"Profile");
         adapter.addFragment(new SearchFragment(),"Search");
         viewPager.setAdapter(adapter);
