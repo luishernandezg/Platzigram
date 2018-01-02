@@ -1,54 +1,35 @@
 package com.example.luishernandez.platzigram.view;
 
 import android.net.Uri;
-import android.support.annotation.IdRes;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.SearchEvent;
 
 import com.example.luishernandez.platzigram.R;
-import com.example.luishernandez.platzigram.view.fragment.HomeFragment;
 import com.example.luishernandez.platzigram.view.fragment.ProfileFragment;
 import com.example.luishernandez.platzigram.view.fragment.SearchFragment;
-import com.example.luishernandez.platzigram.view.fragment.TabFamiliares;
-import com.example.luishernandez.platzigram.view.fragment.TabUsuario;
-import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.OnTabReselectListener;
 
-public class ContainerActivity extends AppCompatActivity implements TabUsuario.OnFragmentInteractionListener, TabFamiliares.OnFragmentInteractionListener {
+public class ContainerActivity extends AppCompatActivity {
 
+    private  static final String TAG ="ContainerActivity";
+    private SectionsPageAdapter mSectionsPageAdapter;
+    private ViewPager mViewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
         setToolbarTab();
-        /*
-        bottomBar.setOnTabReselectListener(new OnTabReselectListener() {
-            @Override
-            public void onTabReSelected(@IdRes int tabId) {
-                switch (tabId){
-                    case R.id.home:
-                        HomeFragment homeFragment = new HomeFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,homeFragment)
-                            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
-                        break;
-                    case R.id.search:
-                        SearchFragment searchFragment = new SearchFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,searchFragment)
-                                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
-                        break;
-                    case R.id.profile:
-                        ProfileFragment profileFragment = new ProfileFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container,profileFragment)
-                                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).addToBackStack(null).commit();
-                        break;
-                }
 
-            }
-        });*/
+        mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
+
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        setupViewPager(mViewPager);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setupWithViewPager(mViewPager);
+
     }
 
     public void setToolbarTab(){
@@ -61,12 +42,14 @@ public class ContainerActivity extends AppCompatActivity implements TabUsuario.O
         tabLayout.addTab(tabLayout.newTab().setText("Usuario"));
         tabLayout.addTab(tabLayout.newTab().setText("Familiares"));
 
-
-
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
+    public void setupViewPager(ViewPager viewPager){
+        SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
+        adapter.addFragment(new ProfileFragment(),"Profile");
+        adapter.addFragment(new SearchFragment(),"Search");
+        viewPager.setAdapter(adapter);
     }
+
+
 }

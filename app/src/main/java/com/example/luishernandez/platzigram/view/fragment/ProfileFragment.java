@@ -14,7 +14,7 @@ import com.example.luishernandez.platzigram.R;
  */
 public class ProfileFragment extends Fragment {
 
-
+private  static final String TAG ="ProfileFragment";
     public ProfileFragment() {
         // Required empty public constructor
     }

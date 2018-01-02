@@ -14,6 +14,7 @@ import com.example.luishernandez.platzigram.R;
  */
 public class SearchFragment extends Fragment {
 
+    private  static final String TAG ="SearchFragment";
 
     public SearchFragment() {
         // Required empty public constructor
