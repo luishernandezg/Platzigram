@@ -59,7 +59,7 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
         public PictureViewHolder(View itemView) {
             super(itemView);
 
-            pictureCard    = (ImageView) itemView.findViewById(R.id.pictureCard);
+            pictureCard    = (ImageView) itemView.findViewById(R.id.image_card);
             userNameCard   = (TextView)  itemView.findViewById(R.id.username_card);
             timeCard       = (TextView)  itemView.findViewById(R.id.dateCard);
             likeNumberCard = (TextView)  itemView.findViewById(R.id.likeNumberCard);
