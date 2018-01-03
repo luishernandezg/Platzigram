@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.luishernandez.platzigram.view.PictureDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayoutPictureDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appBarLayout_height"
+        android:theme="@style/Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/imageHeader"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:background="@drawable/banner_pre_register"
+                app:layout_collapseMode="parallax"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarPictureDetail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottombar_height"
+                android:background="@color/colorPrimary"
+                app:popupTheme="@style/Theme.AppCompat.Light"
+                app:layout_collapseMode="pin">
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:id="@+id/usernameDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/padding_horizontal_login"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:text="@string/usernameDetail"
+                android:textSize="@dimen/usernameDetail_textsize" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/padding_horizontal_login"
+                android:paddingRight="@dimen/padding_horizontal_login">
+
+                <TextView
+                    android:id="@+id/likeNumberDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/likeNumberDetail"
+                    android:textSize="@dimen/likeNumberDetail_textsize" />
+
+                <TextView
+                    android:id="@+id/secondWordDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/secondWord_marginLeft"
+                    android:text="@string/likeSecondWord"
+                    android:textSize="@dimen/likeNumberDetail_textsize" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/separetor_height"
+                android:background="@android:color/darker_gray">
+
+            </View>
+
+            <TextView
+                android:id="@+id/titleDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/secondWord_marginLeft"
+                android:text="@string/TitleDetail"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/titleDetail_margintop"
+                android:textSize="@dimen/likeNumberDetail_textsize"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textContentDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loren"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="@dimen/titleDetail_margintop"
+                android:paddingLeft="@dimen/paddin_horizontal_textContentDetail"
+                android:paddingRight="@dimen/paddin_horizontal_textContentDetail"
+                android:textSize="@dimen/likeNumberDetail_textsize"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -11,4 +11,11 @@
     <dimen name="firstWoed_size_card">15sp</dimen>
     <dimen name="like_margintop_card">10dp</dimen>
     <dimen name="bottombar_height">70dp</dimen>
+    <dimen name="appBarLayout_height">256dp</dimen>
+    <dimen name="usernameDetail_textsize">25sp</dimen>
+    <dimen name="likeNumberDetail_textsize">15sp</dimen>
+    <dimen name="secondWord_marginLeft">7dp</dimen>
+    <dimen name="separetor_height">1dp</dimen>
+    <dimen name="titleDetail_margintop">20dp</dimen>
+    <dimen name="paddin_horizontal_textContentDetail">35dp</dimen>
 </resources>

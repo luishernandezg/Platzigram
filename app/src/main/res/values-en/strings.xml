@@ -10,4 +10,6 @@
     <string name="toolbar_tittle_createaccount">Create account</string>
     <string name="firstord_card">Hace</string>
     <string name="dateCard_text">19-12-2017</string>
+    <string name="likeSecondWord">Me Gusta</string>
+    <string name="TitleDetail">Especialidades</string>
 </resources>

@@ -47,15 +47,15 @@ public class HomeFragment extends Fragment {
 
     public ArrayList<Picture> buildPictures(){
         ArrayList<Picture> pictures = new ArrayList<>();
-        pictures.add(new Picture("Petra Perez"
+        pictures.add(new Picture("Lorena Prezi"
                 ,"https://static.iris.net.co/semana/upload/images/2016/12/23/510460_1.jpg"
-                ,"4 dias", "3"));
-        pictures.add(new Picture("Pedro Perez"
+                ," 4 dias", "3 Like"));
+        pictures.add(new Picture("Lorezo Pezzo"
                 ,"https://orientacion.universia.edu.pe/imgs2011/imagenes/shuttersto-2016_09_16_190709.jpg"
-                ,"4 dias", "3"));
-        pictures.add(new Picture("Lola Lala"
+                ," 4 dias", "3Like"));
+        pictures.add(new Picture("Paola Del Monte"
                 ,"https://www.solosegurosmedicos.com/wp-content/uploads/2014/09/segurosmedicosprivados5.jpg"
-                ,"4 dias", "3"));
+                ," 4 dias", "3 Like"));
         return pictures;
     }
 
