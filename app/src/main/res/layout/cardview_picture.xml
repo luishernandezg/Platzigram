@@ -16,6 +16,7 @@
             android:layout_height="@dimen/height_card"
             android:background="@drawable/banner_pre_register"
             android:scaleType="centerCrop"
+            android:transitionName="@string/transitionname_picture"
         />
 
         <LinearLayout

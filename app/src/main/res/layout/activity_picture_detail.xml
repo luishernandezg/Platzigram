@@ -26,13 +26,14 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:background="@drawable/banner_pre_register"
-                app:layout_collapseMode="parallax"/>
+                app:layout_collapseMode="parallax"
+                android:transitionName="@string/transitionname_picture"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbarPictureDetail"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/bottombar_height"
-                android:background="@color/colorPrimary"
+
                 app:popupTheme="@style/Theme.AppCompat.Light"
                 app:layout_collapseMode="pin">
 
@@ -123,5 +124,14 @@
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/appBarLayoutPictureDetail"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/heartfull" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -26,4 +26,5 @@
     <string name="likeSecondWord">Me Gusta</string>
     <string name="TitleDetail">Especialidades</string>
     <string name="loren">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor erat sed commodo malesuada. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla viverra vehicula mauris quis consectetur. Ut sed malesuada magna. Donec dignissim leo sit amet ex convallis commodo. Nunc vel ante ac ligula lobortis laoreet. Aliquam consequat dictum sapien a sagittis. Nunc tempor non nunc nec sollicitudin. Aliquam erat magna, ullamcorper a porta eget, ultricies id neque. Aenean risus elit, pellentesque nec efficitur et, laoreet quis mi. Aenean ullamcorper ipsum aliquet neque tristique pretium. Mauris dictum risus in lorem luctus, in malesuada eros ultricies. Nam blandit tristique neque, vel egestas nisl porttitor et.</string>
+    <string name="transitionname_picture">transitionnamepicture</string>
 </resources>

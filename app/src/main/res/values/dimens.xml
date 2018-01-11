@@ -18,4 +18,8 @@
     <dimen name="separetor_height">1dp</dimen>
     <dimen name="titleDetail_margintop">20dp</dimen>
     <dimen name="paddin_horizontal_textContentDetail">35dp</dimen>
+    <dimen name="textsizeNameProfile">30dp</dimen>
+    <dimen name="circleImageProfileSize">160dp</dimen>
+    <dimen name="circleImageProfileMarginTop">39dp</dimen>
+    <dimen name="circleImageProfileElevation">10dp</dimen>
 </resources>
